@@ -1,0 +1,26 @@
+{
+  "compatibility_date": "2025-03-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "AirtableMCP",
+        "name": "AirtableMCP"
+      }
+    ]
+  },
+  "main": "src/server.ts",
+  "migrations": [
+    {
+      "new_sqlite_classes": ["AirtableMCP"],
+      "tag": "v1"
+    }
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  },
+  "name": "airtable-mcp"
+}
