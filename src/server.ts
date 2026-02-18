@@ -81,7 +81,7 @@ export class AirtableMCP extends McpAgent<Env, {}> {
         inputSchema: { 
           baseId: z.string(),
           tableName: z.string(),
-          fields: z.record(z.any())
+          fields: z.record(z.string(), z.string())
         }
       },
       async ({ baseId, tableName, fields }, { requestInfo }) => {
@@ -128,7 +128,7 @@ export class AirtableMCP extends McpAgent<Env, {}> {
           baseId: z.string(),
           tableName: z.string(),
           recordId: z.string(),
-          fields: z.record(z.any())
+          fields: z.record(z.string(), z.string())
         }
       },
       async ({ baseId, tableName, recordId, fields }, { requestInfo }) => {
